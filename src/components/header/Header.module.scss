@@ -1,0 +1,43 @@
+@use '../../styles/variables' as variables;
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 35px;
+  left: 0;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  color: variables.$link-main;
+  text-decoration: none;
+
+  &Logo {
+    display: block;
+    max-width: 124px;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &Action {
+    max-width: 163px;
+    width: 100%;
+    padding: 14px 0;
+  }
+}
+
+.list {
+  display: flex;
+  gap: 50px;
+}
