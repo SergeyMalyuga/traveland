@@ -1,0 +1,61 @@
+@use "./styles/variables" as variables;
+@use './styles/fonts';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: aquamarine;
+  color: variables.$text-main;
+  font-family: variables.$font-family-primary;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: left;
+  margin: 0;
+}
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.btn-base {
+  display: block;
+  cursor: pointer;
+  background-color: variables.$button-bg;
+  border-radius: 5px;
+  color: variables.$text-main;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+}
