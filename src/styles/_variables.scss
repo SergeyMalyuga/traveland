@@ -11,9 +11,13 @@ $text-main: $white;
 
 /* link */
 $link-main: $white;
+$link-hover: color.scale($white, $blackness: 20%);
+$link-active: color.scale($white, $blackness: 40%);
 
 /* button */
 $button-bg: $tomato;
+$button-bg-hover: color.scale($tomato, $blackness: 20%);
+$button-bg-active: color.scale($tomato, $blackness: 40%);
 
 // ==== TYPOGRAPHY ==== //
 $font-family-primary: 'Roboto', sans-serif;
