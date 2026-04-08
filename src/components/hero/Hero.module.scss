@@ -1,0 +1,49 @@
+@use '../../styles/variables' as variables;
+
+.hero {
+  position: relative;
+  padding: 286px 0 244px;
+  background-image: url("/images/raster/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: variables.$overlay;
+    z-index: -1;
+  }
+}
+
+.title {
+  max-width: 804px;
+  width: 100%;
+  color: variables.$title-main;
+  font-family: variables.$font-family-secondary;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.text {
+  color: variables.$text-accent;
+  max-width: 458px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.link {
+  text-decoration: none;
+  padding: 17px 0;
+  max-width: 187px;
+  width: 100%;
+}

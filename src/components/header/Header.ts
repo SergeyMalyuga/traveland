@@ -8,6 +8,7 @@ export class Header {
                 <a class="${styles.link} ${styles.linkLogo}" href="/">
         <img src="/images/vector/logo.svg" width="124" height="36" alt="Логотип компании"/>
 </a>
+<div class="${styles.wrapperHeader}">
 <nav aria-label="Основная навигация">
 <ul class="${styles.list}">
 <li><a class="${styles.link}" href="#">Home</a></li>
@@ -18,6 +19,7 @@ export class Header {
 </ul>
 </nav>
 <a class="${styles.linkAction} btn-base">Booking now</a>
+</div>
 </div>
 </header>`
     }

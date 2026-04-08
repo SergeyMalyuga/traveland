@@ -4,10 +4,18 @@
 
 /* base */
 $white: rgb(255 255 255);
+$black: rgb(0 0 0);
 $tomato: rgb(201 69 59);
 
 /* text */
 $text-main: $white;
+$text-accent: color.scale($black, $lightness: 60%);
+
+/* title */
+$title-main: $white;
+
+/* overlay */
+$overlay: color.scale($black, $alpha: -70%);
 
 /* link */
 $link-main: $white;
