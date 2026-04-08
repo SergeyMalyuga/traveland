@@ -17,6 +17,7 @@
 .link {
   color: variables.$link-main;
   text-decoration: none;
+  transition: color 0.5s ease;
 
   &Logo {
     display: block;
@@ -34,6 +35,14 @@
     max-width: 163px;
     width: 100%;
     padding: 14px 0;
+  }
+
+  &:hover {
+    color: variables.$link-hover;
+  }
+
+  &:active {
+    color: variables.$link-active;
   }
 }
 
