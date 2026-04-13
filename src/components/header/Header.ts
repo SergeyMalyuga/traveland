@@ -20,6 +20,9 @@ export class Header {
 </nav>
 <a class="${styles.linkAction} btn-base">Booking now</a>
 </div>
+<button class="${styles.burger}" type="button">
+<span class="${styles.line}"></span>
+</button>
 </div>
 </header>`
     }
