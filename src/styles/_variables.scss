@@ -13,6 +13,7 @@ $text-accent: color.scale($black, $lightness: 60%);
 
 /* title */
 $title-main: $white;
+$title-accent: $black;
 
 /* overlay */
 $overlay: color.scale($black, $alpha: -70%);
