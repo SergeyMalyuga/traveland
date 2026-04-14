@@ -32,6 +32,10 @@
   letter-spacing: 0%;
   text-align: left;
   margin-bottom: 30px;
+
+  @media (width <= 831px) {
+    font-size: clamp(2.1875rem, 1.4047rem + 3.9139vw, 3.4375rem);
+  }
 }
 
 .text {
