@@ -5,11 +5,13 @@ export class ToggleNavMenu {
     private isOpen: boolean = false;
     private readonly toggleBtn: HTMLElement;
     private readonly openClass: string;
+    private readonly btnCloseClass: string;
 
     public constructor(element: HTMLElement, options: NavMenuProps) {
         this.element = element;
         this.toggleBtn = options.toggleBtn;
         this.openClass = options.openClass;
+        this.btnCloseClass = options.btnCloseClass;
         this.init();
     }
 
@@ -20,10 +22,12 @@ export class ToggleNavMenu {
 
     private close() {
         this.element.classList.remove(this.openClass);
+        this.toggleBtn.classList.remove(this.btnCloseClass);
     }
 
     private open() {
         this.element.classList.add(this.openClass);
+        this.toggleBtn.classList.add(this.btnCloseClass);
     }
 
     private toggle = () => {

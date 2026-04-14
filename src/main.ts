@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const burger = document.querySelector(`.${headerStyles.burger}`) as HTMLElement;
     const headerNavMenu = document.querySelector(`.${headerStyles.wrapperHeader}`) as HTMLElement;
-    const toggleNavMenu = new ToggleNavMenu(headerNavMenu, {toggleBtn: burger, openClass: headerStyles.navOpen});
+    const toggleNavMenu = new ToggleNavMenu(headerNavMenu, {toggleBtn: burger, openClass: headerStyles.navOpen, btnCloseClass: headerStyles.burgerOpen});
 
 
     window.addEventListener('beforeunload', () => {
