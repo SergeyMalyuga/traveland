@@ -29,6 +29,10 @@ $button-bg: $tomato;
 $button-bg-hover: color.scale($tomato, $blackness: 20%);
 $button-bg-active: color.scale($tomato, $blackness: 40%);
 
+/* location-card */
+$location-card-border: color.scale($black, $lightness: 90%);
+$location-card-shadow: color.scale($black, $lightness: 80%);
+
 // ==== TYPOGRAPHY ==== //
 $font-family-primary: 'Roboto', sans-serif;
 $font-family-secondary: 'Gelasio', serif;
