@@ -2,8 +2,36 @@
 
 .popular {
   padding: 140px 0;
+
+  @media (width <= 860px) {
+    padding: 70px 0;
+  }
+
+  @media (width <= 480px) {
+    padding: 50px 0;
+  }
 }
 
 .list {
   display: flex;
+  gap: 30px;
+
+  li {
+    width: calc((100% - (30px * 2)) / 3);
+    border: 1px solid variables.$location-card-border;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px 0 variables.$location-card-shadow;
+    overflow: hidden;
+    padding-bottom: 33px;
+
+    @media (width <= 860px) {
+      max-width: 360px;
+      width: 100%;
+    }
+  }
+
+  @media (width <= 860px) {
+  flex-direction: column;
+    align-items: center;
+  }
 }

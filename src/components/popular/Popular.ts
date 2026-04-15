@@ -1,6 +1,6 @@
 import styles from './Popular.module.scss';
 import {LOCATIONS} from "../../constants/consts.ts";
-import {LocationCard} from "../locationCard/locationCard.ts";
+import {LocationCard} from "../locationCard/LocationCard.ts";
 
 export class Popular {
     public render() {
