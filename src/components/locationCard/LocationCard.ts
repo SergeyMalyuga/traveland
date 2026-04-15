@@ -1,4 +1,5 @@
 import type {Location} from "../../models/Location.ts";
+import styles from './LocationCard.module.scss';
 
 
 export class LocationCard {
@@ -13,9 +14,11 @@ export class LocationCard {
         const {url, height, width, alt} = image;
         const article = document.createElement('article');
         article.innerHTML = `
-        <img src="${url}" width="${width}" height="${height}" alt="${alt}"/>
-        <h2>${title}</h2>
-        <p>${description}</p>`
+        <img class="${styles.image}" src="${url}" width="${width}" height="${height}" alt="${alt}"/>
+       <div class="${styles.wrapper}">
+       <h2 class="${styles.title}">${title}</h2>
+        <p class="${styles.text}">${description}</p> 
+</div>`
         return article;
     }
 }
