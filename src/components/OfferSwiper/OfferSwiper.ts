@@ -13,8 +13,10 @@ export class OfferSwiper {
         if (swiper) {
             this.swiper = new Swiper(swiper, {
                 modules: [Navigation, Pagination],
-                slidesPerView: 4,
-                spaceBetween: 30,
+                slidesPerView: "auto",
+                centeredSlides: true,
+                initialSlide: 2,
+                spaceBetween: 73,
                 speed: 600,
                 pagination: {
                     el: '.swiper-pagination',

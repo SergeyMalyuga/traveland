@@ -1,3 +1,6 @@
+import {OFFERS} from "../../constants/consts.ts";
+import {OfferCard} from "../offer-card/OfferCard.ts";
+
 export class Offers {
     public render() {
         const section = document.createElement('section');
@@ -11,13 +14,7 @@ export class Offers {
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="/images/raster/statue-of-liberty.jpg"></div>
-    <div class="swiper-slide"><img src="/images/raster/statue-of-liberty.jpg"></div>
-    <div class="swiper-slide"><img src="/images/raster/statue-of-liberty.jpg"></div>
-       <div class="swiper-slide"><img src="/images/raster/statue-of-liberty.jpg"></div>
-    <div class="swiper-slide"><img src="/images/raster/statue-of-liberty.jpg"></div>
-    <div class="swiper-slide"><img src="/images/raster/statue-of-liberty.jpg"></div>
+
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
@@ -30,6 +27,16 @@ export class Offers {
   <div class="swiper-scrollbar"></div>
 </div>
 </div>`
+        const swiperContainer = section.querySelector('.swiper-wrapper') as HTMLElement;
+
+        for (let offer of OFFERS) {
+            const swiperSlide = document.createElement('div');
+            const card = new OfferCard(offer);
+            swiperSlide.className = 'swiper-slide';
+            swiperSlide.innerHTML = card.render();
+            swiperContainer.appendChild(swiperSlide);
+        }
+
         return section;
     }
 }
