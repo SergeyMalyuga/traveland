@@ -4,8 +4,7 @@ export const Hooks = {
     HEADER: '[data-hook="header"]',
     HERO: '[data-hook="hero"]',
     POPULAR: '[data-hook="popular"]',
-    NEW_COLLECTION: '[data-hook="new-collection"]',
-    FOOTER: '[data-hook="footer"]',
+    OFFERS: '[data-hook="offers"]',
 } as const;
 
 export const LOCATIONS: Location[] = [
