@@ -1,0 +1,75 @@
+@use '../../styles/variables' as variables;
+
+.card {
+  max-width: 262px;
+  width: 100%;
+  color: variables.$text-accent;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px ;
+}
+
+.title {
+  color: variables.$title-accent;
+  font-family: variables.$font-family-secondary;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.wrapper {
+  &Info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &Country {
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.country, .rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 11px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.country {
+  &::before {
+    background-image: url("/images/vector/location-icon.svg");
+  }
+}
+
+.rating {
+  color: variables.$text-accent-dark;
+
+  &::before {
+    background-image: url("/images/vector/star-icon.svg");
+  }
+}
+
+data {
+  span {
+    color: variables.$text-accent-dark;
+  }
+}
+
+
