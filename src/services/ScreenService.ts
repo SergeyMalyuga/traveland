@@ -7,7 +7,7 @@ export class ScreenService {
     private mediaQuery = window.matchMedia('(max-width: 890px)');
     private isTablet = this.mediaQuery.matches;
 
-    constructor(bodyService: BodyService, toggleNavMenu: ToggleNavMenu) { //TODO создать type для параметров
+    constructor(bodyService: BodyService, toggleNavMenu: ToggleNavMenu) { 
         this.bodyService = bodyService;
         this.toggleNavMenu = toggleNavMenu;
         this.mediaQuery.addEventListener('change', this.mediaQueryHandler);

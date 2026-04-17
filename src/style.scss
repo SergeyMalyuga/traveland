@@ -81,6 +81,13 @@ body {
   overflow: hidden;
 }
 
+.swiper-slide {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

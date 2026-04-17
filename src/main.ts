@@ -1,3 +1,6 @@
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import './style.scss';
 import {Main} from "./pages/main/Main.ts";
 import {Header} from "./components/header/Header.ts";
@@ -7,6 +10,8 @@ import headerStyles from './components/header/Header.module.scss'
 import {Popular} from "./components/popular/Popular.ts";
 import {BodyService} from "./services/BodyService.ts";
 import {ScreenService} from "./services/ScreenService.ts";
+import {Offers} from "./components/offers/Offers.ts";
+import {OfferSwiper} from "./components/OfferSwiper/OfferSwiper.ts";
 
 document.addEventListener('DOMContentLoaded', () => {
     const app = document.getElementById('app') as HTMLElement;
@@ -14,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = new Header();
     const hero = new Hero();
     const popular = new Popular();
-    const mainPage = new Main(app, {header, hero, popular});
+    const offers = new Offers();
+    const mainPage = new Main(app, {header, hero, popular, offers});
     mainPage.render();
 
     const burger = document.querySelector(`.${headerStyles.burger}`) as HTMLElement;
@@ -27,10 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const screenService = new ScreenService(bodyService, toggleNavMenu);
-
+    const offerSwiper = new OfferSwiper();
 
     window.addEventListener('beforeunload', () => {
         toggleNavMenu.destroy();
         screenService.destroy();
+        offerSwiper.destroy();
     });
 })
