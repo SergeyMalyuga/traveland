@@ -17,5 +17,8 @@
     "typescript": "~6.0.2",
     "vite": "^8.0.4",
     "vite-css-modules": "^1.15.0"
+  },
+  "dependencies": {
+    "swiper": "^12.1.3"
   }
 }
