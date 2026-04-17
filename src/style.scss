@@ -82,10 +82,16 @@ body {
 }
 
 .swiper-slide {
+  max-width: 262px !important;
+
   img {
     width: 100%;
     height: auto;
   }
+}
+
+.swiper-wrapper {
+  padding-bottom: 50px;
 }
 
 .visually-hidden {

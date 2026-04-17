@@ -100,7 +100,7 @@ export const OFFERS: Offer[] = [
     },
     {
         image: {
-            url: '/images/raster/dizin.jpg',
+            url: '/images/raster/osaka-сastle.jpg',
             width: 262,
             height: 173,
             alt: 'Osaka Castle'

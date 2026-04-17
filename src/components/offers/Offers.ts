@@ -1,5 +1,5 @@
 import {OFFERS} from "../../constants/consts.ts";
-import {OfferCard} from "../offer-card/OfferCard.ts";
+import {OfferCard} from "../offerCard/OfferCard.ts";
 
 export class Offers {
     public render() {
