@@ -23,6 +23,7 @@ export class OfferSwiper {
                     clickable: true
                 },
                 navigation: {
+                    addIcons: false,
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 }

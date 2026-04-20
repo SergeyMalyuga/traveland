@@ -94,6 +94,34 @@ body {
   padding-bottom: 50px;
 }
 
+.swiper-button-prev {
+  background-image: url("/images/vector/prev.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper-button-next {
+  background-image: url("/images/vector/next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: max-content;
+}
+
+.swiper-pagination-bullet {
+  background-color: variables.$pagination-bullet-bg;
+  width: 75px;
+  height: 5px;
+  border-radius: 10px;
+
+  @media (width <= 657px) {
+    width: 8px;
+    height: 8px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
