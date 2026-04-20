@@ -34,6 +34,9 @@ $button-bg-active: color.scale($tomato, $blackness: 40%);
 $location-card-border: color.scale($black, $lightness: 90%);
 $location-card-shadow: color.scale($black, $lightness: 80%);
 
+/* pagination-bullet */
+$pagination-bullet-bg: $tomato;
+
 // ==== TYPOGRAPHY ==== //
 $font-family-primary: 'Roboto', sans-serif;
 $font-family-secondary: 'Gelasio', serif;
