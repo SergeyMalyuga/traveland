@@ -1,1 +1,36 @@
 @use '../../styles/variables' as variables;
+
+.offers {
+  padding-bottom: 140px;
+
+  @media (width <= 860px) {
+    padding-bottom: 70px;
+  }
+
+  @media (width <= 480px) {
+    padding-bottom: 50px;
+  }
+}
+
+.swiper {
+  &Controls {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+
+    @media (width <= 480px) {
+      gap: 25px;
+    }
+  }
+}
+
+.button-next, .button-prev {
+  position: static;
+  margin-top: 0;
+}
+
+.pagination {
+  position: static;
+  width: min-content;
+}

@@ -1,10 +1,12 @@
 import {OFFERS} from "../../constants/consts.ts";
 import {OfferCard} from "../offerCard/OfferCard.ts";
+import styles from './Offers.module.scss';
 
 export class Offers {
     public render() {
         const section = document.createElement('section');
         section.setAttribute('id', 'offers');
+        section.className = styles.offers;
         section.innerHTML = `
         <div class="container">
         <h2 class="section-title">Special Offers</h2>
@@ -13,18 +15,14 @@ export class Offers {
         <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
+  <div class="swiper-wrapper"></div>
 
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
+</div>
+  <div class="${styles.swiperControls}">
+  <div class="swiper-button-prev ${styles.buttonPrev}"></div>
+    <div class="swiper-pagination ${styles.pagination}"></div>
+  <div class="swiper-button-next ${styles.buttonNext}"></div>
 </div>
 </div>`
         const swiperContainer = section.querySelector('.swiper-wrapper') as HTMLElement;
