@@ -5,6 +5,7 @@ import type {Hero} from "../../components/hero/Hero.ts";
 import {Hooks} from "../../constants/consts.ts";
 import type {Popular} from "../../components/popular/Popular.ts";
 import type {Offers} from "../../components/offers/Offers.ts";
+import type {News} from "../../components/news/News.ts";
 
 export class Main {
     private container: HTMLElement;
@@ -12,6 +13,7 @@ export class Main {
     private hero: Hero;
     private popular: Popular;
     private offers: Offers;
+    private news: News;
 
     constructor(container: HTMLElement, props: MainProps) {
         this.container = container;
@@ -19,6 +21,7 @@ export class Main {
         this.hero = props.hero;
         this.popular = props.popular;
         this.offers = props.offers;
+        this.news = props.news;
     }
 
     public render() {
@@ -28,11 +31,13 @@ ${this.header.render()}
         <div data-hook="hero"></div>
         <div data-hook="popular"></div>
         <div data-hook="offers"></div>
+        <div data-hook="news"></div>
 </main>
         `;
         this.mount(this.hero.render(), Hooks.HERO);
         this.mount(this.popular.render(), Hooks.POPULAR);
         this.mount(this.offers.render(), Hooks.OFFERS);
+        this.mount(this.news.render(), Hooks.NEWS);
     }
 
     private mount(element: HTMLElement, data: DataHook) {
