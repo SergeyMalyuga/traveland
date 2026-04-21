@@ -1,0 +1,144 @@
+@use '../../styles/variables' as variables;
+
+.footer {
+  padding: 70px 0 80px;
+  background-color: variables.$bg-footer;
+
+  @media (width <= 480px) {
+    padding: 50px 0;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  @media (width <= 960px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: variables.$text-accent-dark;
+
+  &Logo {
+    display: block;
+    max-width: 124px;
+    width: 100%;
+    margin-bottom: 40px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &Email {
+    margin-bottom: 20px;
+  }
+
+  &Social {
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &Nav {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 6%;
+    text-align: left;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  color: variables.$text-accent-dark;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 6%;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.list {
+  &Socials {
+    display: flex;
+    gap: 30px;
+  }
+
+  &Nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 121px;
+
+  @media (width <= 1010px) {
+    gap: 60px;
+  }
+}
+
+.input {
+  &Email {
+    padding: 10px 20px;
+    border: 1px solid rgb(0 0 0);
+    border-radius: 5px;
+
+    &::placeholder {
+      color: variables.$text-accent-dark;
+      font-family: variables.$font-family-primary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 6%;
+      text-align: left;
+    }
+    
+    @media (width <= 480px) {
+      max-width: 211px;
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  color: variables.$title-accent;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 6%;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+
+  @media (width <= 480px) {
+    margin-bottom: 21px;
+  }
+}
+
+.submit {
+  width: 103px;
+}
+
+.wrapper {
+  &Input {
+    display: flex;
+    gap: 35px;
+  }
+}
