@@ -1,8 +1,8 @@
-import styles from './Header.module.scss'
+import styles from "./Header.module.scss";
 
 export class Header {
-    public render() {
-        return `
+  public render() {
+    return `
         <header class="${styles.header}" role="banner">
         <div class="${styles.content} container">
                 <a class="${styles.link} ${styles.linkLogo}" href="/">
@@ -24,6 +24,6 @@ export class Header {
 <span class="${styles.line}"></span>
 </button>
 </div>
-</header>`
-    }
+</header>`;
+  }
 }

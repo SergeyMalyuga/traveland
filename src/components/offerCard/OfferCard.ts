@@ -1,16 +1,16 @@
-import styles from './OfferCard.module.scss';
-import type {Offer} from "../../models/Offer.ts";
+import styles from "./OfferCard.module.scss";
+import type { Offer } from "../../models/Offer.ts";
 
 export class OfferCard {
-    private offer: Offer;
+  private offer: Offer;
 
-    constructor(offer: Offer) {
-        this.offer = offer;
-    }
+  constructor(offer: Offer) {
+    this.offer = offer;
+  }
 
-    public render() {
-        const {url, width, height, alt} = this.offer.image;
-        return `
+  public render() {
+    const { url, width, height, alt } = this.offer.image;
+    return `
         <article class="${styles.card}">
         <img class="${styles.image}" src="${url}" width="${width}" height="${height}" alt="${alt}" loading="lazy"/>
         <div class="${styles.wrapperInfo}">
@@ -23,6 +23,6 @@ export class OfferCard {
           <data value="${this.offer.price}"><span>$${this.offer.price}</span>/person</data>
 </div>
 </article>
-        `
-    }
+        `;
+  }
 }

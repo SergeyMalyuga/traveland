@@ -1,4 +1,4 @@
-@use '../../styles/variables' as variables;
+@use "../../styles/variables" as variables;
 
 .popular {
   padding: 140px 0;
@@ -31,7 +31,17 @@
   }
 
   @media (width <= 860px) {
-  flex-direction: column;
+    flex-direction: column;
     align-items: center;
+  }
+}
+
+.text {
+  max-width: 735px;
+  width: 100%;
+  margin: 0 auto 50px;
+
+  @media (width <= 480px) {
+    margin-bottom: 35px;
   }
 }

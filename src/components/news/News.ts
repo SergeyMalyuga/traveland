@@ -1,13 +1,13 @@
-import styles from './News.module.scss';
-import {NEWS} from "../../constants/consts.ts";
-import {NewsCard} from "../newsCard/NewsCard.ts";
+import styles from "./News.module.scss";
+import { NEWS } from "../../constants/consts.ts";
+import { NewsCard } from "../newsCard/NewsCard.ts";
 
 export class News {
-    public render(): HTMLElement {
-        const section = document.createElement('section');
-        section.setAttribute('id', 'news');
-        section.className = styles.news;
-        section.innerHTML = `
+  public render(): HTMLElement {
+    const section = document.createElement("section");
+    section.setAttribute("id", "news");
+    section.className = styles.news;
+    section.innerHTML = `
         <div class="container">
         <h2 class="section-title">From Blog & News</h2>
         <p class="section-text ${styles.text}">Welcome to Community Conversations, a new interview series featuring 
@@ -27,12 +27,14 @@ province of Alberta, and showcases some of Canada's most beautiful scenery.
 <ul class="${styles.listNews}"></ul>
 </div>
 </div>
-        `
-        const listNews = section.querySelector(`.${styles.listNews}`) as HTMLElement;
-        for (let news of NEWS) {
-            const card = new NewsCard(news);
-            listNews.appendChild(card.render());
-        }
-        return section;
+        `;
+    const listNews = section.querySelector(
+      `.${styles.listNews}`,
+    ) as HTMLElement;
+    for (let news of NEWS) {
+      const card = new NewsCard(news);
+      listNews.appendChild(card.render());
     }
+    return section;
+  }
 }

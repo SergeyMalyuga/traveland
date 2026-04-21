@@ -1,4 +1,4 @@
-@use '../../styles/variables' as variables;
+@use "../../styles/variables" as variables;
 
 .header {
   position: absolute;
@@ -102,24 +102,31 @@
   z-index: 10;
 
   &:hover {
-    span, &::before, &::after {
+    span,
+    &::before,
+    &::after {
       background-color: variables.$button-bg-hover;
     }
   }
 
   &:active {
-    span, &::before, &::after {
+    span,
+    &::before,
+    &::after {
       background-color: variables.$button-bg-active;
     }
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     display: block;
     width: 100%;
     height: 2px;
     background-color: variables.$button-bg;
-    transition: background-color 0.5s ease, transform 0.5s ease;
+    transition:
+      background-color 0.5s ease,
+      transform 0.5s ease;
   }
 
   &Open {
@@ -128,7 +135,8 @@
       transition: opacity 0s ease;
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
       position: absolute;
       top: 50%;
       left: 0;
@@ -155,7 +163,9 @@
   width: 100%;
   height: 2px;
   background-color: variables.$button-bg;
-  transition: background-color 0.5s ease, opacity 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    opacity 0.5s ease;
 }
 
 .nav {

@@ -1,8 +1,8 @@
-import styles from './Footer.module.scss';
+import styles from "./Footer.module.scss";
 
 export class Footer {
-    public render() {
-        return `
+  public render() {
+    return `
         <footer class="${styles.footer}">
         <div class="${styles.content} container">
                 <div class="${styles.contacts}">
@@ -43,6 +43,6 @@ export class Footer {
 </form>
 </div>
 </footer>
-`
-    }
+`;
+  }
 }

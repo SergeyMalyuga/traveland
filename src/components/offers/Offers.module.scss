@@ -1,4 +1,4 @@
-@use '../../styles/variables' as variables;
+@use "../../styles/variables" as variables;
 
 .offers {
   padding-bottom: 140px;
@@ -25,7 +25,8 @@
   }
 }
 
-.button-next, .button-prev {
+.button-next,
+.button-prev {
   position: static;
   margin-top: 0;
 }
@@ -33,4 +34,15 @@
 .pagination {
   position: static;
   width: min-content;
+}
+
+
+.text {
+  max-width: 656px;
+  width: 100%;
+  margin: 0 auto 50px;
+
+  @media (width <= 480px) {
+    margin-bottom: 35px;
+  }
 }
