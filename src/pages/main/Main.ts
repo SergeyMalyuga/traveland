@@ -6,6 +6,7 @@ import {Hooks} from "../../constants/consts.ts";
 import type {Popular} from "../../components/popular/Popular.ts";
 import type {Offers} from "../../components/offers/Offers.ts";
 import type {News} from "../../components/news/News.ts";
+import type {Footer} from "../../components/footer/Footer.ts";
 
 export class Main {
     private container: HTMLElement;
@@ -14,6 +15,7 @@ export class Main {
     private popular: Popular;
     private offers: Offers;
     private news: News;
+    private footer: Footer;
 
     constructor(container: HTMLElement, props: MainProps) {
         this.container = container;
@@ -22,6 +24,7 @@ export class Main {
         this.popular = props.popular;
         this.offers = props.offers;
         this.news = props.news;
+        this.footer = props.footer;
     }
 
     public render() {
@@ -33,6 +36,7 @@ ${this.header.render()}
         <div data-hook="offers"></div>
         <div data-hook="news"></div>
 </main>
+${this.footer.render()}
         `;
         this.mount(this.hero.render(), Hooks.HERO);
         this.mount(this.popular.render(), Hooks.POPULAR);

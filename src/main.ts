@@ -13,6 +13,7 @@ import {ScreenService} from "./services/ScreenService.ts";
 import {Offers} from "./components/offers/Offers.ts";
 import {OfferSwiper} from "./components/OfferSwiper/OfferSwiper.ts";
 import {News} from "./components/news/News.ts";
+import {Footer} from "./components/footer/Footer.ts";
 
 document.addEventListener('DOMContentLoaded', () => {
     const app = document.getElementById('app') as HTMLElement;
@@ -22,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popular = new Popular();
     const offers = new Offers();
     const news = new News();
-    const mainPage = new Main(app, {header, hero, popular, offers, news});
+    const footer = new Footer();
+    const mainPage = new Main(app, {header, hero, popular, offers, news, footer});
     mainPage.render();
 
     const burger = document.querySelector(`.${headerStyles.burger}`) as HTMLElement;
