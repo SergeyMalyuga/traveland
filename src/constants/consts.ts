@@ -1,11 +1,13 @@
 import type {Location} from "../models/Location.ts";
 import type {Offer} from "../models/Offer.ts";
+import type {News} from "../models/News.ts";
 
 export const Hooks = {
     HEADER: '[data-hook="header"]',
     HERO: '[data-hook="hero"]',
     POPULAR: '[data-hook="popular"]',
     OFFERS: '[data-hook="offers"]',
+    NEWS: '[data-hook="news"]',
 } as const;
 
 export const LOCATIONS: Location[] = [
@@ -111,5 +113,41 @@ export const OFFERS: Offer[] = [
         days: 4,
         nights: 5,
         price: 700
+    }
+]
+
+export const NEWS: News[] = [
+    {
+        image: {
+            url: '/images/raster/hiroshima-japan.jpg',
+            width: 263,
+            height: 201,
+            alt: 'Hirosima Japan'
+        },
+        title: 'The Hiroshima Peace!',
+        description: 'It was formally opened to the public in August that year.',
+        author: '@shova_bd88'
+    },
+    {
+        image: {
+            url: '/images/raster/india-top-attractions-varanasi.jpg',
+            width: 263,
+            height: 201,
+            alt: 'India top attractions Varanasi'
+        },
+        title: 'The faithful prayers!',
+        description: 'A major pilgrimage center for Hindus, the holy city.',
+        author: '@adem/smith'
+    },
+    {
+        image: {
+            url: '/images/raster/naltar-lake-pakistan.jpg',
+            width: 263,
+            height: 201,
+            alt: 'Naltar lake Pakistan'
+        },
+        title: 'Colourful waters!',
+        description: 'Forest-driven water and energy cycles are poorly.',
+        author: '@jhon7leew'
     }
 ]
