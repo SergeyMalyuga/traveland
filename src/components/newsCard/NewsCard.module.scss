@@ -1,0 +1,51 @@
+@use '../../styles/variables' as variables;
+
+.card {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+
+  @media (width <= 480px) {
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  &Image {
+    max-width: 263px;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.title {
+  color: variables.$title-accent;
+  font-family: variables.$font-family-secondary;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.text {
+  color: variables.$text-accent;
+  margin-bottom: 5px;
+  max-width: 247px;
+  width: 100%;
+  text-align: left;
+
+}
+
+.author {
+  color: variables.$text-accent-dark;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+}
