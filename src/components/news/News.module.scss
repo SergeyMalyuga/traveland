@@ -1,0 +1,86 @@
+@use '../../styles/variables' as variables;
+
+.news {
+  padding-bottom: 140px;
+
+  @media (width <= 860px) {
+    padding-bottom: 70px;
+  }
+
+  @media (width <= 480px) {
+    padding-bottom: 50px;
+  }
+}
+
+.text {
+  max-width: 581px;
+  width: 100%;
+  margin: 0 auto 50px;
+
+  &Blog {
+    text-align: left;
+    max-width: 470px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &Author {
+    color: variables.$text-accent-dark;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  @media (width <= 960px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.wrapper {
+  &Image {
+    max-width: 554px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 35px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.title {
+  color: variables.$title-accent;
+  font-family: variables.$font-family-secondary;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.no {
+  &Wrap {
+    white-space: nowrap;
+  }
+}
+
+.list {
+  &News {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
