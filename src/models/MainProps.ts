@@ -3,6 +3,7 @@ import type {Hero} from "../components/hero/Hero.ts";
 import type {Popular} from "../components/popular/Popular.ts";
 import type {Offers} from "../components/offers/Offers.ts";
 import type {News} from "../components/news/News.ts";
+import type {Footer} from "../components/footer/Footer.ts";
 
 export interface MainProps {
     header: Header;
@@ -10,4 +11,5 @@ export interface MainProps {
     popular: Popular;
     offers: Offers;
     news: News;
+    footer: Footer;
 }
