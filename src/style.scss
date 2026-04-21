@@ -40,6 +40,7 @@ body {
 .btn-base {
   display: block;
   cursor: pointer;
+  border: none;
   background-color: variables.$button-bg;
   border-radius: 5px;
   color: variables.$text-main;
