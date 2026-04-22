@@ -28,6 +28,8 @@ $overlay-nav: color.scale($black, $alpha: -70%);
 $link-main: $white;
 $link-hover: color.scale($white, $blackness: 20%);
 $link-active: color.scale($white, $blackness: 40%);
+$link-hover-dark: color.scale($black, $lightness: 40%);
+$link-active-dark: color.scale($black, $lightness: 60%);
 
 /* button */
 $button-bg: $tomato;
