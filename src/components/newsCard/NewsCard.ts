@@ -13,9 +13,11 @@ export class NewsCard {
     article.className = styles.card;
     const { url, width, height, alt } = this.news.image;
     article.innerHTML = `
+<a href="#" class="${styles.link} link-hover">
         <div class="${styles.wrapperImage}">
         <img src="${url}" width="${width}" height="${height}" alt="${alt}" loading="lazy"/>
 </div>
+</a>
 <div>
 <h3 class="${styles.title}">${this.news.title}</h3>
 <p class="${styles.text}">${this.news.description}</p>

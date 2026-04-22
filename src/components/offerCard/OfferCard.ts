@@ -12,7 +12,7 @@ export class OfferCard {
     const { url, width, height, alt } = this.offer.image;
     return `
         <article class="${styles.card}">
-        <img class="${styles.image}" src="${url}" width="${width}" height="${height}" alt="${alt}" loading="lazy"/>
+        <a href="#" class="${styles.link} link-hover"><img class="${styles.image}" src="${url}" width="${width}" height="${height}" alt="${alt}" loading="lazy"/></a>
         <div class="${styles.wrapperInfo}">
           <h3 class="${styles.title}">${this.offer.title}</h3>
           <div class="${styles.wrapperCountry}">

@@ -12,12 +12,8 @@ export class Offers {
         <h2 class="section-title">Special Offers</h2>
         <p class="section-text ${styles.text}">With the New Year comes a refreshing sense of wanderlust, 
         a longing in our souls to escape to warmer climates, </p>
-        <!-- Slider main container -->
 <div class="swiper">
-  <!-- Additional required wrapper -->
   <div class="swiper-wrapper"></div>
-
-  <div class="swiper-scrollbar"></div>
 </div>
   <div class="${styles.swiperControls}">
   <div class="swiper-button-prev ${styles.buttonPrev}"></div>

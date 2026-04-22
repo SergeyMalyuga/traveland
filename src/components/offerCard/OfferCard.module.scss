@@ -12,7 +12,6 @@
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
 }
 
 .title {
@@ -71,4 +70,11 @@ data {
   span {
     color: variables.$text-accent-dark;
   }
+}
+
+.link {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
